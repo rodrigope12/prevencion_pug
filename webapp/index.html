@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#667eea">
+    <title>Viaje de Humo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="state-healthy">
+    <div id="game-container">
+
+        <!-- Stats Bar -->
+        <header id="stats-bar">
+            <div class="stat-card glass-card">
+                <div id="health-value" class="stat-value">100%</div>
+                <div class="stat-label">Salud</div>
+            </div>
+            <div class="stat-card glass-card" id="addiction-card">
+                <div id="addiction-value" class="stat-value">0%</div>
+                <div class="stat-label">Adicción</div>
+            </div>
+            <!-- Life Lost Widget (Apple Health Style) -->
+            <div id="life-lost-card" class="glass-card hidden">
+                <div id="life-lost-value" style="width:100%">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Stage -->
+        <main id="stage">
+            <div id="character-container">
+                <div id="character" class="state-healthy">
+                    <div class="face">
+                        <div class="eye left"></div>
+                        <div class="eye right"></div>
+                        <div class="mouth"></div>
+                    </div>
+                </div>
+                <div id="smoke-cloud">💨</div>
+                <div id="thought-bubble">🚬</div>
+            </div>
+
+            <div id="message-area">
+                <div class="glass-card">
+                    <p id="game-message">Hola. Soy tu reflejo. ¿Qué harás conmigo?</p>
+                    <span id="message-source"></span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Controls -->
+        <footer id="controls">
+            <button id="btn-smoke" class="control-btn btn-danger">
+                <span class="icon">🚬</span>
+                <span class="label">Fumar<br><small>1 Cajetilla</small></span>
+            </button>
+            <button id="btn-heal" class="control-btn btn-success">
+                <span class="icon">🥗</span>
+                <span class="label">Comer<br><small>1 Mes</small></span>
+            </button>
+            <button id="btn-exercise" class="control-btn btn-info">
+                <span class="icon">🏃</span>
+                <span class="label">Ejercitar<br><small>Cardio</small></span>
+            </button>
+        </footer>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="modal-overlay">
+        <div id="modal-content" class="glass-card">
+            <h2 id="modal-title">Colapso</h2>
+            <p id="modal-body">Tu cuerpo no pudo más.</p>
+            <a href="https://www.who.int/es/news-room/fact-sheets/detail/tobacco" target="_blank"
+                class="modal-btn primary">Necesito ayuda real</a>
+            <button id="modal-reset" class="modal-btn secondary">Intentar de nuevo</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
