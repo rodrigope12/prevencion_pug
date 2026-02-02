@@ -26,4 +26,4 @@ git clone https://github.com/rodrigope12/prevencion_pug.git
 ```
 
 ---
-*Developed by Rodrigo Perez Cordero. Part of professional portfolio.*
+*Developed by Rodrigo Perez Cordero.
